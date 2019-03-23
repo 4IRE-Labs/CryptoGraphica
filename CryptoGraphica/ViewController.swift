@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var inputImage: UIImageView!
     @IBOutlet weak var outputImage: UIImageView!
     @IBOutlet weak var actionButton: UIButton!
@@ -23,8 +23,8 @@ class ViewController: UIViewController {
         actionButton.setTitle("Encode", for: .normal)
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         self.view.addGestureRecognizer(recognizer)
-  }
-
+    }
+    
     @IBAction func didAction(_ sender: Any) {
         if !encoded {
             encode()
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         inputField.endEditing(true)
     }
     
-   
+    
     private func encode() {
         guard let source = inputImage.image else {
             return

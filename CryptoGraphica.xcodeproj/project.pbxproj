@@ -13,7 +13,6 @@
 		C1BBFA6C22467E58004224EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BBFA6B22467E58004224EF /* Assets.xcassets */; };
 		C1BBFA6F22467E58004224EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BBFA6D22467E58004224EF /* LaunchScreen.storyboard */; };
 		C1BBFA7722467EF7004224EF /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BBFA7622467EF7004224EF /* Decoder.swift */; };
-		C1BBFA7922467EFF004224EF /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BBFA7822467EFF004224EF /* Defaults.swift */; };
 		C1BBFA7B22467F04004224EF /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BBFA7A22467F04004224EF /* Defaults.swift */; };
 		C1BBFA7D22467F0B004224EF /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BBFA7C22467F0B004224EF /* Encoder.swift */; };
 		C1BBFA7F22467F12004224EF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BBFA7E22467F12004224EF /* Utilities.swift */; };
@@ -28,7 +27,6 @@
 		C1BBFA6E22467E58004224EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1BBFA7022467E58004224EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1BBFA7622467EF7004224EF /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Decoder.swift; path = ../../another/SwiftStego/SwiftStego/Decoder.swift; sourceTree = "<group>"; };
-		C1BBFA7822467EFF004224EF /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = ../another/SwiftStego/SwiftStego/Defaults.swift; sourceTree = "<group>"; };
 		C1BBFA7A22467F04004224EF /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = ../../another/SwiftStego/SwiftStego/Defaults.swift; sourceTree = "<group>"; };
 		C1BBFA7C22467F0B004224EF /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Encoder.swift; path = ../../another/SwiftStego/SwiftStego/Encoder.swift; sourceTree = "<group>"; };
 		C1BBFA7E22467F12004224EF /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../../another/SwiftStego/SwiftStego/Utilities.swift; sourceTree = "<group>"; };
@@ -50,7 +48,6 @@
 			children = (
 				C1BBFA6322467E56004224EF /* CryptoGraphica */,
 				C1BBFA6222467E56004224EF /* Products */,
-				C1BBFA7822467EFF004224EF /* Defaults.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,7 +148,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1BBFA6722467E56004224EF /* ViewController.swift in Sources */,
-				C1BBFA7922467EFF004224EF /* Defaults.swift in Sources */,
 				C1BBFA7F22467F12004224EF /* Utilities.swift in Sources */,
 				C1BBFA7D22467F0B004224EF /* Encoder.swift in Sources */,
 				C1BBFA7B22467F04004224EF /* Defaults.swift in Sources */,
