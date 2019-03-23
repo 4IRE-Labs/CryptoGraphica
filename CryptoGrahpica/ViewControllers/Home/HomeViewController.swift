@@ -66,7 +66,6 @@ extension HomeViewController {
         UIView.animate(withDuration: 0.7) {
             self.view.layoutIfNeeded()
         }
-
     }
 }
 
