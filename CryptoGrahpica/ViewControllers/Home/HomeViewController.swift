@@ -51,9 +51,10 @@ class HomeViewController: UIViewController {
                 switch item {
                 case .photo(p: let photo):
                     let storyboard = UIStoryboard(name: "Pin", bundle: nil)
-                    let controller = storyboard.instantiateViewController(withIdentifier: "PinViewController") as! PinViewController
-                    controller.imageView.image = photo.originalImage
-                    self?.present(controller, animated: false, completion: nil)
+                    let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+                    (nav.viewControllers.first as! PinViewController).image = photo
+                    (nav.viewControllers.first as! PinViewController).seed = self?.textView.text
+                    self?.present(nav, animated: true, completion: nil)
                 default:
                     break
                 }
@@ -67,9 +68,9 @@ class HomeViewController: UIViewController {
             switch item {
             case .photo(p: let photo):
                 let storyboard = UIStoryboard(name: "Pin", bundle: nil)
-                let controller = storyboard.instantiateViewController(withIdentifier: "PinViewController") as! PinViewController
-                controller.imageView.image = photo.originalImage
-                self?.present(controller, animated: false, completion: nil)
+                let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+                (nav.viewControllers.first as! PinViewController).image = photo
+                self?.present(nav, animated: true, completion: nil)
             default:
                 break
             }
@@ -93,7 +94,7 @@ class HomeViewController: UIViewController {
         
         let picker = YPImagePicker(configuration: config)
         picker.didFinishPicking { (mediaItems, cancelled) in
-            picker.dismiss(animated: false, completion: { })
+            picker.dismiss(animated: true, completion: { })
             action(mediaItems)
         }
         present(picker, animated: true, completion: nil)

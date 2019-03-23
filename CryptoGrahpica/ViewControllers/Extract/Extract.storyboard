@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Extract View Controller-->
+        <scene sceneID="iyL-Qc-acL">
+            <objects>
+                <viewController storyboardIdentifier="ExtractViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MPS-KG-cee" customClass="ExtractViewController" customModule="CryptoGrahpica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="smS-lc-YSc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extract Seedphrase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2d-9I-IDj">
+                                <rect key="frame" x="20" y="81" width="335" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sDg-sS-pBY">
+                                <rect key="frame" x="20" y="147" width="335" height="151.5"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PLZ-Xg-DOK">
+                                <rect key="frame" x="20" y="308.5" width="335" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wLw-gx-UEU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qL-6l-oQF" customClass="CGFilledButton" customModule="CryptoGrahpica" customModuleProvider="target">
+                                <rect key="frame" x="20" y="378.5" width="335" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9PU-Fv-rNG"/>
+                                </constraints>
+                                <state key="normal" title="Copy">
+                                    <color key="titleColor" name="RedButton"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyBtnTapped:" destination="MPS-KG-cee" eventType="touchUpInside" id="tdF-LA-k9R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csH-9U-mdr" customClass="CGFilledButton" customModule="CryptoGrahpica" customModuleProvider="target">
+                                <rect key="frame" x="20" y="442.5" width="335" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="s7U-tK-Gzn"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" name="RedButton"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="MPS-KG-cee" eventType="touchUpInside" id="690-5K-z6n"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decryption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCN-T8-Om8">
+                                <rect key="frame" x="20" y="40" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CPn-uI-Vq3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="G7N-0o-0aC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="CGBlue"/>
+                        <constraints>
+                            <constraint firstItem="csH-9U-mdr" firstAttribute="top" secondItem="9qL-6l-oQF" secondAttribute="bottom" constant="20" id="3M8-Ra-KJr"/>
+                            <constraint firstItem="acX-No-Ocm" firstAttribute="trailing" secondItem="PLZ-Xg-DOK" secondAttribute="trailing" constant="20" id="8Yx-ZF-Jcy"/>
+                            <constraint firstItem="PLZ-Xg-DOK" firstAttribute="top" secondItem="sDg-sS-pBY" secondAttribute="bottom" constant="10" id="8bx-c5-yoJ"/>
+                            <constraint firstItem="acX-No-Ocm" firstAttribute="trailing" secondItem="sDg-sS-pBY" secondAttribute="trailing" constant="20" id="8vU-Ii-OQM"/>
+                            <constraint firstItem="acX-No-Ocm" firstAttribute="trailing" secondItem="csH-9U-mdr" secondAttribute="trailing" constant="20" id="EJd-86-hda"/>
+                            <constraint firstItem="sDg-sS-pBY" firstAttribute="top" secondItem="y2d-9I-IDj" secondAttribute="bottom" constant="25" id="F5g-jY-yXV"/>
+                            <constraint firstItem="sCN-T8-Om8" firstAttribute="leading" secondItem="acX-No-Ocm" secondAttribute="leading" constant="20" id="FRU-oL-6qV"/>
+                            <constraint firstItem="sDg-sS-pBY" firstAttribute="leading" secondItem="acX-No-Ocm" secondAttribute="leading" constant="20" id="Jm9-Rk-ofa"/>
+                            <constraint firstItem="acX-No-Ocm" firstAttribute="trailing" secondItem="y2d-9I-IDj" secondAttribute="trailing" constant="20" id="M8B-MC-8tY"/>
+                            <constraint firstItem="9qL-6l-oQF" firstAttribute="top" secondItem="PLZ-Xg-DOK" secondAttribute="bottom" constant="20" id="O6N-NI-Mx7"/>
+                            <constraint firstItem="y2d-9I-IDj" firstAttribute="top" secondItem="sCN-T8-Om8" secondAttribute="bottom" constant="20" id="PFi-x5-tao"/>
+                            <constraint firstItem="PLZ-Xg-DOK" firstAttribute="leading" secondItem="acX-No-Ocm" secondAttribute="leading" constant="20" id="Yla-hV-w4I"/>
+                            <constraint firstItem="csH-9U-mdr" firstAttribute="leading" secondItem="acX-No-Ocm" secondAttribute="leading" constant="20" id="eQ1-Vc-AmL"/>
+                            <constraint firstItem="sCN-T8-Om8" firstAttribute="top" secondItem="acX-No-Ocm" secondAttribute="top" constant="20" id="lMf-2G-pMG"/>
+                            <constraint firstItem="acX-No-Ocm" firstAttribute="trailing" secondItem="9qL-6l-oQF" secondAttribute="trailing" constant="20" id="p2I-UP-yYD"/>
+                            <constraint firstItem="9qL-6l-oQF" firstAttribute="leading" secondItem="acX-No-Ocm" secondAttribute="leading" constant="20" id="v86-TV-Efd"/>
+                            <constraint firstItem="PLZ-Xg-DOK" firstAttribute="centerY" secondItem="smS-lc-YSc" secondAttribute="centerY" id="ySJ-gj-cDe"/>
+                            <constraint firstItem="y2d-9I-IDj" firstAttribute="leading" secondItem="acX-No-Ocm" secondAttribute="leading" constant="20" id="z9j-bP-uG7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="acX-No-Ocm"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="sDg-sS-pBY" id="BRs-n6-OeZ"/>
+                        <outlet property="textView" destination="PLZ-Xg-DOK" id="ahp-pv-LD0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtg-GD-HP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="-311"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="CGBlue">
+            <color red="0.05000000074505806" green="0.56999999284744263" blue="0.87999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RedButton">
+            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

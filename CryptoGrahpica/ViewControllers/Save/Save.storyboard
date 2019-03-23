@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Save View Controller-->
+        <scene sceneID="w3y-8x-i22">
+            <objects>
+                <viewController storyboardIdentifier="SaveViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7XG-Zn-jsm" customClass="SaveViewController" customModule="CryptoGrahpica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6F-Wu-jXE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encryption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyr-tN-1cu">
+                                <rect key="frame" x="20" y="41" width="82.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="eOG-8M-qR9"/>
+                                    <constraint firstAttribute="height" constant="21" id="s8h-L0-gcl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save copies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJB-uR-wvC">
+                                <rect key="frame" x="20" y="82" width="335" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9hd-AA-Hqk">
+                                <rect key="frame" x="20" y="148" width="335" height="148.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLo-Zg-hzU" customClass="CGFilledButton" customModule="CryptoGrahpica" customModuleProvider="target">
+                                <rect key="frame" x="20" y="311.5" width="335" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RMb-PF-M40"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" name="RedButton"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="7XG-Zn-jsm" eventType="touchUpInside" id="O74-SI-e9z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHY-lm-1ZW" customClass="CGFilledButton" customModule="CryptoGrahpica" customModuleProvider="target">
+                                <rect key="frame" x="20" y="365.5" width="335" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="apM-sh-EEV"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" name="RedButton"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="7XG-Zn-jsm" eventType="touchUpInside" id="FPo-9G-Zo7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="CGGreen"/>
+                        <constraints>
+                            <constraint firstItem="DLo-Zg-hzU" firstAttribute="leading" secondItem="q6H-C8-hVW" secondAttribute="leading" constant="20" id="7q9-IE-mcJ"/>
+                            <constraint firstItem="q6H-C8-hVW" firstAttribute="trailing" secondItem="9hd-AA-Hqk" secondAttribute="trailing" constant="20" id="G7v-3E-f0m"/>
+                            <constraint firstItem="q6H-C8-hVW" firstAttribute="trailing" secondItem="NHY-lm-1ZW" secondAttribute="trailing" constant="20" id="Itz-Wu-KE7"/>
+                            <constraint firstItem="DLo-Zg-hzU" firstAttribute="centerY" secondItem="c6F-Wu-jXE" secondAttribute="centerY" id="MUe-VX-T7r"/>
+                            <constraint firstItem="gJB-uR-wvC" firstAttribute="leading" secondItem="q6H-C8-hVW" secondAttribute="leading" constant="20" id="UzA-dL-mPg"/>
+                            <constraint firstItem="Oyr-tN-1cu" firstAttribute="top" secondItem="q6H-C8-hVW" secondAttribute="top" constant="21" id="Ykg-uX-ai4"/>
+                            <constraint firstItem="q6H-C8-hVW" firstAttribute="trailing" secondItem="DLo-Zg-hzU" secondAttribute="trailing" constant="20" id="YnT-i4-Q59"/>
+                            <constraint firstItem="9hd-AA-Hqk" firstAttribute="top" secondItem="gJB-uR-wvC" secondAttribute="bottom" constant="25" id="c4e-yb-SBd"/>
+                            <constraint firstItem="Oyr-tN-1cu" firstAttribute="leading" secondItem="q6H-C8-hVW" secondAttribute="leading" constant="20" id="cKm-ta-Ttg"/>
+                            <constraint firstItem="NHY-lm-1ZW" firstAttribute="leading" secondItem="q6H-C8-hVW" secondAttribute="leading" constant="20" id="hew-zW-S1N"/>
+                            <constraint firstItem="q6H-C8-hVW" firstAttribute="trailing" secondItem="gJB-uR-wvC" secondAttribute="trailing" constant="20" id="nWd-bA-Noy"/>
+                            <constraint firstItem="gJB-uR-wvC" firstAttribute="top" secondItem="Oyr-tN-1cu" secondAttribute="bottom" constant="20" id="q24-vo-m1C"/>
+                            <constraint firstItem="NHY-lm-1ZW" firstAttribute="top" secondItem="DLo-Zg-hzU" secondAttribute="bottom" constant="10" id="q2t-S2-bRo"/>
+                            <constraint firstItem="9hd-AA-Hqk" firstAttribute="leading" secondItem="q6H-C8-hVW" secondAttribute="leading" constant="20" id="vZj-HA-drM"/>
+                            <constraint firstItem="DLo-Zg-hzU" firstAttribute="top" secondItem="9hd-AA-Hqk" secondAttribute="bottom" constant="15" id="zJx-si-Mge"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q6H-C8-hVW"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="9hd-AA-Hqk" id="lOO-BY-EtO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dh9-JJ-d9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="-247"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="CGGreen">
+            <color red="0.0099999997764825821" green="0.88999998569488525" blue="0.61000001430511475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RedButton">
+            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
