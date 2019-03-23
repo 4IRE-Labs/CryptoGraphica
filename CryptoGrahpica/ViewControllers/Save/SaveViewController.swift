@@ -31,25 +31,25 @@ class SaveViewController: UIViewController {
     
     @IBAction func save(_ sender: Any) {
         
-        let filename = getDocumentsDirectory().appendingPathComponent("test.png")
-        if let data = self.encodedImage.jpegData(compressionQuality: 1.0) {
-            do {
-                try data.write(to: filename)
-            }
-            catch {
-                print(error)
-            }
-        }
-        
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: filename)
-        }) { (success, error) in
-            print("\(success, error)")
-        }
-        
-        
-        
-        UIImageWriteToSavedPhotosAlbum(encodedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+//        let filename = getDocumentsDirectory().appendingPathComponent("test.png")
+//        if let data = self.encodedImage.jpegData(compressionQuality: 1.0) {
+//            do {
+//                try data.write(to: filename)
+//            }
+//            catch {
+//                print(error)
+//            }
+//        }
+//        
+//        PHPhotoLibrary.shared().performChanges({
+//            PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: filename)
+//        }) { (success, error) in
+//            print("\(success, error)")
+//        }
+//        
+//        
+//        
+//        UIImageWriteToSavedPhotosAlbum(encodedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         
         let activityViewController = UIActivityViewController(activityItems: [encodedImage], applicationActivities:nil)
         activityViewController.excludedActivityTypes = [.print, .assignToContact, .addToReadingList, .openInIBooks, .markupAsPDF]

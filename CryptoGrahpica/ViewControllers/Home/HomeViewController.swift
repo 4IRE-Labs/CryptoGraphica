@@ -86,6 +86,7 @@ class HomeViewController: UIViewController {
                     (nav.viewControllers.first as! PinViewController).image = image
                     (nav.viewControllers.first as! PinViewController).seed = self?.textView.text
                     self?.present(nav, animated: true, completion: nil)
+                self?.textView.text = ""
             }
         }
     }
