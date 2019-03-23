@@ -77,6 +77,9 @@ class Decoder {
         let ratio = (size - Int(pixelPosition)) / pixelsToHide
         
         let salt = ratio
+        if salt == 0 {
+            return
+        }
         
         
         while pixelPosition <= size {
