@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		520CAD3022467A37007B200E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520CAD2F22467A37007B200E /* AppDelegate.swift */; };
+		520CAD3222467A37007B200E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520CAD3122467A37007B200E /* HomeViewController.swift */; };
+		520CAD3522467A37007B200E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520CAD3322467A37007B200E /* Home.storyboard */; };
+		520CAD3722467A39007B200E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520CAD3622467A39007B200E /* Assets.xcassets */; };
+		520CAD3A22467A39007B200E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520CAD3822467A39007B200E /* LaunchScreen.storyboard */; };
+		529FFE1322467E0300914019 /* CGBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FFE1222467E0300914019 /* CGBorderButton.swift */; };
+		529FFE1522467E9C00914019 /* CGFilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FFE1422467E9C00914019 /* CGFilledButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		520CAD2C22467A37007B200E /* CryptoGrahpica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoGrahpica.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		520CAD2F22467A37007B200E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		520CAD3122467A37007B200E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		520CAD3422467A37007B200E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		520CAD3622467A39007B200E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		520CAD3922467A39007B200E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		520CAD3B22467A39007B200E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		529FFE1222467E0300914019 /* CGBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGBorderButton.swift; sourceTree = "<group>"; };
+		529FFE1422467E9C00914019 /* CGFilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFilledButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		520CAD2922467A37007B200E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		520CAD2322467A37007B200E = {
+			isa = PBXGroup;
+			children = (
+				520CAD2E22467A37007B200E /* CryptoGrahpica */,
+				520CAD2D22467A37007B200E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		520CAD2D22467A37007B200E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				520CAD2C22467A37007B200E /* CryptoGrahpica.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		520CAD2E22467A37007B200E /* CryptoGrahpica */ = {
+			isa = PBXGroup;
+			children = (
+				529FFE1022467DE100914019 /* UIElements */,
+				520CAD4122467A5B007B200E /* ViewControllers */,
+				520CAD2F22467A37007B200E /* AppDelegate.swift */,
+				520CAD3622467A39007B200E /* Assets.xcassets */,
+				520CAD3822467A39007B200E /* LaunchScreen.storyboard */,
+				520CAD3B22467A39007B200E /* Info.plist */,
+			);
+			path = CryptoGrahpica;
+			sourceTree = "<group>";
+		};
+		520CAD4122467A5B007B200E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				520CAD4222467A80007B200E /* Home */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		520CAD4222467A80007B200E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				520CAD3122467A37007B200E /* HomeViewController.swift */,
+				520CAD3322467A37007B200E /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		529FFE1022467DE100914019 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				529FFE1122467DEA00914019 /* Buttons */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		529FFE1122467DEA00914019 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				529FFE1222467E0300914019 /* CGBorderButton.swift */,
+				529FFE1422467E9C00914019 /* CGFilledButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		520CAD2B22467A37007B200E /* CryptoGrahpica */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 520CAD3E22467A39007B200E /* Build configuration list for PBXNativeTarget "CryptoGrahpica" */;
+			buildPhases = (
+				520CAD2822467A37007B200E /* Sources */,
+				520CAD2922467A37007B200E /* Frameworks */,
+				520CAD2A22467A37007B200E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoGrahpica;
+			productName = CryptoGrahpica;
+			productReference = 520CAD2C22467A37007B200E /* CryptoGrahpica.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		520CAD2422467A37007B200E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = cg;
+				TargetAttributes = {
+					520CAD2B22467A37007B200E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 520CAD2722467A37007B200E /* Build configuration list for PBXProject "CryptoGrahpica" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 520CAD2322467A37007B200E;
+			productRefGroup = 520CAD2D22467A37007B200E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				520CAD2B22467A37007B200E /* CryptoGrahpica */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		520CAD2A22467A37007B200E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				520CAD3A22467A39007B200E /* LaunchScreen.storyboard in Resources */,
+				520CAD3722467A39007B200E /* Assets.xcassets in Resources */,
+				520CAD3522467A37007B200E /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		520CAD2822467A37007B200E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				520CAD3222467A37007B200E /* HomeViewController.swift in Sources */,
+				529FFE1522467E9C00914019 /* CGFilledButton.swift in Sources */,
+				529FFE1322467E0300914019 /* CGBorderButton.swift in Sources */,
+				520CAD3022467A37007B200E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		520CAD3322467A37007B200E /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				520CAD3422467A37007B200E /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		520CAD3822467A39007B200E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				520CAD3922467A39007B200E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		520CAD3C22467A39007B200E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		520CAD3D22467A39007B200E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		520CAD3F22467A39007B200E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TNNH6FD49C;
+				INFOPLIST_FILE = CryptoGrahpica/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.cg.CryptoGrahpica;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		520CAD4022467A39007B200E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TNNH6FD49C;
+				INFOPLIST_FILE = CryptoGrahpica/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.cg.CryptoGrahpica;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		520CAD2722467A37007B200E /* Build configuration list for PBXProject "CryptoGrahpica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				520CAD3C22467A39007B200E /* Debug */,
+				520CAD3D22467A39007B200E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		520CAD3E22467A39007B200E /* Build configuration list for PBXNativeTarget "CryptoGrahpica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				520CAD3F22467A39007B200E /* Debug */,
+				520CAD4022467A39007B200E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 520CAD2422467A37007B200E /* Project object */;
+}
