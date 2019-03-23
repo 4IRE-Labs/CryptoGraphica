@@ -10,7 +10,7 @@ import UIKit
 import YPImagePicker
 
 class PinViewController: UIViewController {
-
+    
     var image: YPMediaPhoto!
     var seed: String?
     
@@ -19,7 +19,7 @@ class PinViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         imageView.image = image.originalImage
     }
     
@@ -31,20 +31,30 @@ class PinViewController: UIViewController {
 
 extension PinViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
+        guard let password = textField.text, password.isEmpty == false else {
+            UIUtils.showOKAlert(vc: self, title: "Password should not be empty", message: nil)
+            return false
+        }
+
         if let seed = seed {
             let storyboard = UIStoryboard(name: "Save", bundle: nil)
             let save = storyboard.instantiateViewController(withIdentifier: "SaveViewController") as! SaveViewController
             save.image = image
             save.seed = seed
+            save.password = password
             self.navigationController?.pushViewController(save, animated: true)
         }
+        else {
+            if let seed = Decoder().decode(image: image.originalImage, key: password) {
+                let storyboard = UIStoryboard(name: "Extract", bundle: nil)
+                let extract = storyboard.instantiateViewController(withIdentifier: "ExtractViewController") as! ExtractViewController
+                extract.image = image
+                extract.seed = seed
+                self.navigationController?.pushViewController(extract, animated: true)
+            }
             else {
-            let storyboard = UIStoryboard(name: "Extract", bundle: nil)
-            let extract = storyboard.instantiateViewController(withIdentifier: "ExtractViewController") as! ExtractViewController
-            extract.image = image
-            self.navigationController?.pushViewController(extract, animated: true)
-
+                UIUtils.showOKAlert(vc: self, title: "Sorry, something is wrong", message: "Please make sure the right message and password are used.")
+            }
         }
         
         return true

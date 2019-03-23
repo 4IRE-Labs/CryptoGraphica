@@ -16,18 +16,21 @@ class SaveViewController: UIViewController {
     var seed: String!
     var password: String!
     
+    private var encodedImage: UIImage!
+    
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = image.originalImage
+        self.encodedImage = Encoder().encode(image: image.originalImage, data: seed, key: password)
+        let decoded = Decoder().decode(image: image.originalImage, key: password)
+        print(decoded)
+        imageView.image = self.encodedImage
     }
     
     @IBAction func save(_ sender: Any) {
-        //ToDo. Encrypt image with seed and password and save.
-        
-        let activityViewController = UIActivityViewController(activityItems: [self.image.image], applicationActivities:nil)
+        let activityViewController = UIActivityViewController(activityItems: [encodedImage], applicationActivities:nil)
         activityViewController.excludedActivityTypes = [.print, .assignToContact, .addToReadingList, .openInIBooks, .markupAsPDF]
         self.present(activityViewController, animated: true) {}
         

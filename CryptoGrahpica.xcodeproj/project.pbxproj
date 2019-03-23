@@ -23,6 +23,12 @@
 		52E2CFCB2246ABE800F10898 /* Save.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E2CFCA2246ABE800F10898 /* Save.storyboard */; };
 		52E2CFCE2246B7B600F10898 /* ExtractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFCD2246B7B600F10898 /* ExtractViewController.swift */; };
 		52E2CFD02246B7C100F10898 /* Extract.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E2CFCF2246B7C100F10898 /* Extract.storyboard */; };
+		52E2CFE22246BDA800F10898 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFDE2246BDA400F10898 /* Defaults.swift */; };
+		52E2CFE32246BDA800F10898 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFDF2246BDA800F10898 /* Decoder.swift */; };
+		52E2CFE42246BDA800F10898 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFE02246BDA800F10898 /* Encoder.swift */; };
+		52E2CFE52246BDA800F10898 /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFE12246BDA800F10898 /* Cipher.swift */; };
+		52E2CFE82246BDAE00F10898 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFE62246BDAE00F10898 /* Result.swift */; };
+		52E2CFE92246BDAE00F10898 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFE72246BDAE00F10898 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +63,12 @@
 		52E2CFCA2246ABE800F10898 /* Save.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Save.storyboard; sourceTree = "<group>"; };
 		52E2CFCD2246B7B600F10898 /* ExtractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractViewController.swift; sourceTree = "<group>"; };
 		52E2CFCF2246B7C100F10898 /* Extract.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Extract.storyboard; sourceTree = "<group>"; };
+		52E2CFDE2246BDA400F10898 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		52E2CFDF2246BDA800F10898 /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		52E2CFE02246BDA800F10898 /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		52E2CFE12246BDA800F10898 /* Cipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cipher.swift; sourceTree = "<group>"; };
+		52E2CFE62246BDAE00F10898 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		52E2CFE72246BDAE00F10898 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		B298B91AA4B42D02F42961A0 /* Pods-CryptoGrahpica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoGrahpica.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoGrahpica/Pods-CryptoGrahpica.release.xcconfig"; sourceTree = "<group>"; };
 		C7D2ACB6C538CFA00DF910F9 /* Pods-CryptoGrahpica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoGrahpica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoGrahpica/Pods-CryptoGrahpica.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +210,12 @@
 		52E2CFD22246BC8200F10898 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				52E2CFE62246BDAE00F10898 /* Result.swift */,
+				52E2CFE72246BDAE00F10898 /* Utilities.swift */,
+				52E2CFE12246BDA800F10898 /* Cipher.swift */,
+				52E2CFDF2246BDA800F10898 /* Decoder.swift */,
+				52E2CFDE2246BDA400F10898 /* Defaults.swift */,
+				52E2CFE02246BDA800F10898 /* Encoder.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -346,13 +364,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E2CFE22246BDA800F10898 /* Defaults.swift in Sources */,
+				52E2CFE82246BDAE00F10898 /* Result.swift in Sources */,
+				52E2CFE92246BDAE00F10898 /* Utilities.swift in Sources */,
 				52E2CFCE2246B7B600F10898 /* ExtractViewController.swift in Sources */,
 				52E2CFC02246993B00F10898 /* UIUtils.swift in Sources */,
 				520CAD3222467A37007B200E /* HomeViewController.swift in Sources */,
 				52E2CFC42246A36A00F10898 /* PinViewController.swift in Sources */,
 				529FFE1822468A4400914019 /* CGTextView.swift in Sources */,
+				52E2CFE52246BDA800F10898 /* Cipher.swift in Sources */,
 				529FFE1522467E9C00914019 /* CGFilledButton.swift in Sources */,
 				520CAD3022467A37007B200E /* AppDelegate.swift in Sources */,
+				52E2CFE32246BDA800F10898 /* Decoder.swift in Sources */,
+				52E2CFE42246BDA800F10898 /* Encoder.swift in Sources */,
 				52E2CFC92246ABDE00F10898 /* SaveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
