@@ -11,6 +11,8 @@ import YPImagePicker
 import AVFoundation
 import AVKit
 import Photos
+import DKPhotoGallery
+import DKImagePickerController
 
 class HomeViewController: UIViewController {
     
@@ -46,58 +48,70 @@ class HomeViewController: UIViewController {
             UIUtils.showOKAlert(vc: self, title: "The seed is empty", message: "Please enter the seed ...")
         }
         else {
-            showPicker(title: "Save to Photo") { [weak self] (mediaItems) in
-                guard let item = mediaItems.first else { return }
-                switch item {
-                case .photo(p: let photo):
+            showPicker(title: "Save to Photo") { [weak self] (image) in
                     let storyboard = UIStoryboard(name: "Pin", bundle: nil)
                     let nav = storyboard.instantiateInitialViewController() as! UINavigationController
-                    (nav.viewControllers.first as! PinViewController).image = photo
+                    (nav.viewControllers.first as! PinViewController).image = image
                     (nav.viewControllers.first as! PinViewController).seed = self?.textView.text
                     self?.present(nav, animated: true, completion: nil)
-                default:
-                    break
-                }
             }
         }
     }
     
     @IBAction func recoverFromPhoto(_ sender: Any) {
-        showPicker(title: "Recover from Photo") { [weak self] (mediaItems) in
-            guard let item = mediaItems.first else { return }
-            switch item {
-            case .photo(p: let photo):
+        showPicker(title: "Recover from Photo") { [weak self] (image) in
                 let storyboard = UIStoryboard(name: "Pin", bundle: nil)
                 let nav = storyboard.instantiateInitialViewController() as! UINavigationController
-                (nav.viewControllers.first as! PinViewController).image = photo
+                (nav.viewControllers.first as! PinViewController).image = image
                 self?.present(nav, animated: true, completion: nil)
-            default:
-                break
-            }
 
         }
     }
     
-    private func showPicker(title: String, action: @escaping ([YPMediaItem]) -> ()) {
-        var config = YPImagePickerConfiguration()
-        config.library.mediaType = .photo
-        config.onlySquareImagesFromCamera = false
-        config.shouldSaveNewPicturesToAlbum = false
-        config.startOnScreen = .library
-        config.screens = [.library, .photo]
-        config.wordings.libraryTitle = title
-        config.hidesStatusBar = false
-        config.hidesBottomBar = false
-        config.colors.tintColor = UIColor(named: "CGGreen")!
-        config.colors.photoVideoScreenBackground = UIColor(named: "CGGreen")!
-        config.showsFilters = false
+    private func showPicker(title: String, action: @escaping (UIImage) -> ()) {
         
-        let picker = YPImagePicker(configuration: config)
-        picker.didFinishPicking { (mediaItems, cancelled) in
-            picker.dismiss(animated: true, completion: { })
-            action(mediaItems)
+        let pickerController = DKImagePickerController()
+        pickerController.singleSelect = true
+        pickerController.assetType = .allPhotos
+        pickerController.sourceType = .both
+        pickerController.didSelectAssets = { (assets: [DKAsset]) in
+            guard let originalAsset = assets.first?.originalAsset else { return }
+            
+            let requestImageOption = PHImageRequestOptions()
+            requestImageOption.deliveryMode = PHImageRequestOptionsDeliveryMode.highQualityFormat
+            
+            let manager = PHImageManager.default()
+            manager.requestImage(for: originalAsset, targetSize: PHImageManagerMaximumSize, contentMode:PHImageContentMode.default, options: requestImageOption) { (image:UIImage?, _) in
+                guard let image = image else { return }
+                action(image)
+            }
         }
-        present(picker, animated: true, completion: nil)
+        
+        self.present(pickerController, animated: true, completion: {
+            
+        })
+
+        
+//        var config = YPImagePickerConfiguration()
+//        config.library.mediaType = .photo
+//        config.onlySquareImagesFromCamera = false
+//        config.shouldSaveNewPicturesToAlbum = false
+//        config.startOnScreen = .library
+//        config.screens = [.library, .photo]
+//        config.wordings.libraryTitle = title
+//        config.hidesStatusBar = false
+//        config.hidesBottomBar = false
+//        config.colors.tintColor = UIColor(named: "CGGreen")!
+//        config.colors.photoVideoScreenBackground = UIColor(named: "CGGreen")!
+//        config.showsFilters = false
+//        config.library.onlySquare = false
+//
+//        let picker = YPImagePicker(configuration: config)
+//        picker.didFinishPicking { (mediaItems, cancelled) in
+//            picker.dismiss(animated: true, completion: { })
+//            action(mediaItems)
+//        }
+//        present(picker, animated: true, completion: nil)
     }
 }
 

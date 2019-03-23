@@ -11,7 +11,7 @@ import YPImagePicker
 
 class ExtractViewController: UIViewController {
 
-    var image: YPMediaPhoto!
+    var image: UIImage!
     var seed: String!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -19,7 +19,7 @@ class ExtractViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = image.originalImage
+        imageView.image = image
         textView.text = seed
     }
     

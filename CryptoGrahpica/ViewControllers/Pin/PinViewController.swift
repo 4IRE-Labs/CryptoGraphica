@@ -11,7 +11,7 @@ import YPImagePicker
 
 class PinViewController: UIViewController {
     
-    var image: YPMediaPhoto!
+    var image: UIImage!
     var seed: String?
     
     @IBOutlet weak var textField: UITextField!
@@ -20,7 +20,7 @@ class PinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = image.originalImage
+        imageView.image = image
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,7 +45,7 @@ extension PinViewController: UITextFieldDelegate {
             self.navigationController?.pushViewController(save, animated: true)
         }
         else {
-            if let seed = Decoder().decode(image: image.originalImage, key: password) {
+            if let seed = Decoder().decode(image: image, key: password) {
                 let storyboard = UIStoryboard(name: "Extract", bundle: nil)
                 let extract = storyboard.instantiateViewController(withIdentifier: "ExtractViewController") as! ExtractViewController
                 extract.image = image

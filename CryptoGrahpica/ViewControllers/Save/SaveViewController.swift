@@ -12,7 +12,7 @@ import Photos
 
 class SaveViewController: UIViewController {
     
-    var image: YPMediaPhoto!
+    var image: UIImage!
     var seed: String!
     var password: String!
     
@@ -23,8 +23,8 @@ class SaveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.encodedImage = Encoder().encode(image: image.originalImage, data: seed, key: password)
-        let decoded = Decoder().decode(image: image.originalImage, key: password)
+        self.encodedImage = Encoder().encode(image: image, data: seed, key: password)
+        let decoded = Decoder().decode(image: self.encodedImage, key: password)
         print(decoded)
         imageView.image = self.encodedImage
     }
