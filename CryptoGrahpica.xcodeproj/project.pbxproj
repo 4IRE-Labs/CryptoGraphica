@@ -29,6 +29,7 @@
 		52E2CFE52246BDA800F10898 /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFE12246BDA800F10898 /* Cipher.swift */; };
 		52E2CFE82246BDAE00F10898 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFE62246BDAE00F10898 /* Result.swift */; };
 		52E2CFE92246BDAE00F10898 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFE72246BDAE00F10898 /* Utilities.swift */; };
+		52E2CFEC2246DF6B00F10898 /* FromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFEB2246DF6B00F10898 /* FromURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +70,7 @@
 		52E2CFE12246BDA800F10898 /* Cipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cipher.swift; sourceTree = "<group>"; };
 		52E2CFE62246BDAE00F10898 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		52E2CFE72246BDAE00F10898 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		52E2CFEB2246DF6B00F10898 /* FromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromURL.swift; sourceTree = "<group>"; };
 		B298B91AA4B42D02F42961A0 /* Pods-CryptoGrahpica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoGrahpica.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoGrahpica/Pods-CryptoGrahpica.release.xcconfig"; sourceTree = "<group>"; };
 		C7D2ACB6C538CFA00DF910F9 /* Pods-CryptoGrahpica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoGrahpica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoGrahpica/Pods-CryptoGrahpica.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +185,7 @@
 		52E2CFBE224698F500F10898 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				52E2CFEA2246DF5600F10898 /* LaunchedFromURL */,
 				52E2CFD32246BC8700F10898 /* UI */,
 				52E2CFD22246BC8200F10898 /* Crypto */,
 			);
@@ -226,6 +229,14 @@
 				52E2CFBF2246993B00F10898 /* UIUtils.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		52E2CFEA2246DF5600F10898 /* LaunchedFromURL */ = {
+			isa = PBXGroup;
+			children = (
+				52E2CFEB2246DF6B00F10898 /* FromURL.swift */,
+			);
+			path = LaunchedFromURL;
 			sourceTree = "<group>";
 		};
 		6C4305682891A7698D0EAC32 /* Frameworks */ = {
@@ -380,6 +391,7 @@
 				529FFE1822468A4400914019 /* CGTextView.swift in Sources */,
 				52E2CFE52246BDA800F10898 /* Cipher.swift in Sources */,
 				529FFE1522467E9C00914019 /* CGFilledButton.swift in Sources */,
+				52E2CFEC2246DF6B00F10898 /* FromURL.swift in Sources */,
 				520CAD3022467A37007B200E /* AppDelegate.swift in Sources */,
 				52E2CFE32246BDA800F10898 /* Decoder.swift in Sources */,
 				52E2CFE42246BDA800F10898 /* Encoder.swift in Sources */,

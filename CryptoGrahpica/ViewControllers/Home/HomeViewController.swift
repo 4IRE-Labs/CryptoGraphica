@@ -13,6 +13,7 @@ import Photos
 import DKPhotoGallery
 import DKImagePickerController
 
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var logoHeight: NSLayoutConstraint!
@@ -31,6 +32,38 @@ class HomeViewController: UIViewController {
         textView.text = textFieldPlaceholder
         textView.textColor = UIColor.lightGray
         
+
+        FromURL.shared.newValueSet = { [weak self] in
+            if let fileURL = FromURL.shared.imageURL {
+                let storyboard = UIStoryboard(name: "Pin", bundle: nil)
+                let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+                do {
+                    let imageData = try Data(contentsOf: fileURL)
+                    (nav.viewControllers.first as! PinViewController).image = UIImage(data: imageData)
+                    self?.present(nav, animated: true, completion: nil)
+                }
+                catch {
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let fileURL = FromURL.shared.imageURL {
+            let storyboard = UIStoryboard(name: "Pin", bundle: nil)
+            let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+            do {
+                let imageData = try Data(contentsOf: fileURL)
+                (nav.viewControllers.first as! PinViewController).image = UIImage(data: imageData)
+                self.present(nav, animated: true, completion: nil)
+            }
+            catch {
+                print(error)
+            }
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,36 +91,54 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func recoverFromPhoto(_ sender: Any) {
-        showPicker(title: "Recover from Photo") { [weak self] (image) in
-                let storyboard = UIStoryboard(name: "Pin", bundle: nil)
-                let nav = storyboard.instantiateInitialViewController() as! UINavigationController
-                (nav.viewControllers.first as! PinViewController).image = image
-                self?.present(nav, animated: true, completion: nil)
+        let documentPickerViewController = UIDocumentPickerViewController(documentTypes: ["public.item"], in: .import)
+        documentPickerViewController.delegate = self
+        present(documentPickerViewController, animated: true) {}
 
-        }
+//        showPicker(title: "Recover from Photo") { [weak self] (image) in
+//                let storyboard = UIStoryboard(name: "Pin", bundle: nil)
+//                let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+//                (nav.viewControllers.first as! PinViewController).image = image
+//                self?.present(nav, animated: true, completion: nil)
+//
+//        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
     
     private func showPicker(title: String, action: @escaping (UIImage) -> ()) {
         
+
+        
+//        let imageURL = getDocumentsDirectory().appendingPathComponent("test.jpg")
+//        let image    = UIImage(contentsOfFile: imageURL.path)
+//
+//        action(image!)
+
+//
         let pickerController = DKImagePickerController()
         pickerController.singleSelect = true
         pickerController.assetType = .allPhotos
         pickerController.sourceType = .both
         pickerController.didSelectAssets = { (assets: [DKAsset]) in
             guard let originalAsset = assets.first?.originalAsset else { return }
-            
+
             let requestImageOption = PHImageRequestOptions()
-            requestImageOption.deliveryMode = PHImageRequestOptionsDeliveryMode.highQualityFormat
-            
+//            requestImageOption.deliveryMode = PHImageRequestOptionsDeliveryMode.highQualityFormat
+            requestImageOption.version = PHImageRequestOptionsVersion.original
+
             let manager = PHImageManager.default()
             manager.requestImage(for: originalAsset, targetSize: PHImageManagerMaximumSize, contentMode:PHImageContentMode.default, options: requestImageOption) { (image:UIImage?, _) in
                 guard let image = image else { return }
                 action(image)
             }
         }
-        
+
         self.present(pickerController, animated: true, completion: {
-            
+
         })
 
         
@@ -159,4 +210,22 @@ extension HomeViewController: UITextViewDelegate {
             textView.textColor = UIColor.lightGray
         }
     }
+}
+
+extension HomeViewController: UIDocumentPickerDelegate {
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+        do {
+            let storyboard = UIStoryboard(name: "Pin", bundle: nil)
+            let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+                let imageData = try Data(contentsOf: url)
+                (nav.viewControllers.first as! PinViewController).image = UIImage(data: imageData)
+                self.present(nav, animated: true, completion: nil)
+        }
+        catch {
+            print(error)
+        }
+        
+    }
+    
 }
