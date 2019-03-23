@@ -14,8 +14,24 @@
 		520CAD3A22467A39007B200E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520CAD3822467A39007B200E /* LaunchScreen.storyboard */; };
 		529FFE1522467E9C00914019 /* CGFilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FFE1422467E9C00914019 /* CGFilledButton.swift */; };
 		529FFE1822468A4400914019 /* CGTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FFE1722468A4400914019 /* CGTextView.swift */; };
-		E9C21FC8C8710763CB1EB836 /* Pods_CryptoGrahpica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003CA15C9033A15F9BD1BED3 /* Pods_CryptoGrahpica.framework */; };
+		529FFE1A2246969E00914019 /* Pods_CryptoGrahpica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003CA15C9033A15F9BD1BED3 /* Pods_CryptoGrahpica.framework */; };
+		529FFE1B2246969E00914019 /* Pods_CryptoGrahpica.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 003CA15C9033A15F9BD1BED3 /* Pods_CryptoGrahpica.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52E2CFC02246993B00F10898 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFBF2246993B00F10898 /* UIUtils.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		529FFE1C224696A100914019 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				529FFE1B2246969E00914019 /* Pods_CryptoGrahpica.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		003CA15C9033A15F9BD1BED3 /* Pods_CryptoGrahpica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoGrahpica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +44,7 @@
 		520CAD3B22467A39007B200E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		529FFE1422467E9C00914019 /* CGFilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFilledButton.swift; sourceTree = "<group>"; };
 		529FFE1722468A4400914019 /* CGTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGTextView.swift; sourceTree = "<group>"; };
+		52E2CFBF2246993B00F10898 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		B298B91AA4B42D02F42961A0 /* Pods-CryptoGrahpica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoGrahpica.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoGrahpica/Pods-CryptoGrahpica.release.xcconfig"; sourceTree = "<group>"; };
 		C7D2ACB6C538CFA00DF910F9 /* Pods-CryptoGrahpica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoGrahpica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoGrahpica/Pods-CryptoGrahpica.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9C21FC8C8710763CB1EB836 /* Pods_CryptoGrahpica.framework in Frameworks */,
+				529FFE1A2246969E00914019 /* Pods_CryptoGrahpica.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +91,7 @@
 		520CAD2E22467A37007B200E /* CryptoGrahpica */ = {
 			isa = PBXGroup;
 			children = (
+				52E2CFBE224698F500F10898 /* Utils */,
 				529FFE1022467DE100914019 /* UIElements */,
 				520CAD4122467A5B007B200E /* ViewControllers */,
 				520CAD2F22467A37007B200E /* AppDelegate.swift */,
@@ -134,6 +152,14 @@
 			path = SaveToPhoto;
 			sourceTree = "<group>";
 		};
+		52E2CFBE224698F500F10898 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				52E2CFBF2246993B00F10898 /* UIUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		6C4305682891A7698D0EAC32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +179,8 @@
 				520CAD2822467A37007B200E /* Sources */,
 				520CAD2922467A37007B200E /* Frameworks */,
 				520CAD2A22467A37007B200E /* Resources */,
+				529FFE1C224696A100914019 /* Embed Frameworks */,
+				64624DB90FA2F47C5AC2F8BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,6 +238,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		64624DB90FA2F47C5AC2F8BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoGrahpica/Pods-CryptoGrahpica-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoGrahpica/Pods-CryptoGrahpica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E9F9F130AD52144744957A52 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E2CFC02246993B00F10898 /* UIUtils.swift in Sources */,
 				520CAD3222467A37007B200E /* HomeViewController.swift in Sources */,
 				529FFE1822468A4400914019 /* CGTextView.swift in Sources */,
 				529FFE1522467E9C00914019 /* CGFilledButton.swift in Sources */,
@@ -319,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -374,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -392,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TNNH6FD49C;
 				INFOPLIST_FILE = CryptoGrahpica/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TNNH6FD49C;
 				INFOPLIST_FILE = CryptoGrahpica/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

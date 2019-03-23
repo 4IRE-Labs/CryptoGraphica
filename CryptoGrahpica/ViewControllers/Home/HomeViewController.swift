@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import YPImagePicker
+import AVFoundation
+import AVKit
+import Photos
 
 class HomeViewController: UIViewController {
 
@@ -38,11 +42,40 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func storeToPhoto(_ sender: Any) {
-        
+        if textView.text.isEmpty || textView.text == textFieldPlaceholder {
+            UIUtils.showOKAlert(vc: self, title: "The seed is empty", message: "Please enter the seed ...")
+        }
+        else {
+            showPicker(title: "Save to Photo") { [weak self] (mediaItems) in
+                
+            }
+        }
     }
     
     @IBAction func recoverFromPhoto(_ sender: Any) {
         
+    }
+    
+    private func showPicker(title: String, action: @escaping ([YPMediaItem]) -> ()) {
+        var config = YPImagePickerConfiguration()
+        config.library.mediaType = .photo
+        config.onlySquareImagesFromCamera = false
+        config.shouldSaveNewPicturesToAlbum = false
+        config.startOnScreen = .library
+        config.screens = [.library, .photo]
+        config.wordings.libraryTitle = title
+        config.hidesStatusBar = false
+        config.hidesBottomBar = false
+        config.colors.tintColor = UIColor(named: "CGGreen")!
+        config.colors.photoVideoScreenBackground = UIColor(named: "CGGreen")!
+        config.showsFilters = false
+        
+        let picker = YPImagePicker(configuration: config)
+        picker.didFinishPicking { (mediaItems, cancelled) in
+            picker.dismiss(animated: true, completion: { })
+            action(mediaItems)
+        }
+        present(picker, animated: true, completion: nil)
     }
 }
 
