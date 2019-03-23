@@ -1,5 +1,5 @@
 //
-//  CGButton.swift
+//  CGTextView.swift
 //  CryptoGrahpica
 //
 //  Created by test on 3/23/19.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class CGBorderButton: UIButton {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+class CGTextView: UITextView {
+
+    override init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
         commonInit()
     }
     
@@ -21,7 +22,5 @@ class CGBorderButton: UIButton {
     
     private func commonInit() {
         layer.cornerRadius = 4
-        layer.borderColor = self.titleLabel?.textColor.cgColor
-        layer.borderWidth = 1
     }
 }

@@ -12,8 +12,8 @@
 		520CAD3522467A37007B200E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520CAD3322467A37007B200E /* Home.storyboard */; };
 		520CAD3722467A39007B200E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520CAD3622467A39007B200E /* Assets.xcassets */; };
 		520CAD3A22467A39007B200E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520CAD3822467A39007B200E /* LaunchScreen.storyboard */; };
-		529FFE1322467E0300914019 /* CGBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FFE1222467E0300914019 /* CGBorderButton.swift */; };
 		529FFE1522467E9C00914019 /* CGFilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FFE1422467E9C00914019 /* CGFilledButton.swift */; };
+		529FFE1822468A4400914019 /* CGTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FFE1722468A4400914019 /* CGTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		520CAD3622467A39007B200E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		520CAD3922467A39007B200E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		520CAD3B22467A39007B200E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		529FFE1222467E0300914019 /* CGBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGBorderButton.swift; sourceTree = "<group>"; };
 		529FFE1422467E9C00914019 /* CGFilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFilledButton.swift; sourceTree = "<group>"; };
+		529FFE1722468A4400914019 /* CGTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +71,7 @@
 		520CAD4122467A5B007B200E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				529FFE192246926400914019 /* SaveToPhoto */,
 				520CAD4222467A80007B200E /* Home */,
 			);
 			path = ViewControllers;
@@ -88,6 +89,7 @@
 		529FFE1022467DE100914019 /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
+				529FFE1622468A2F00914019 /* TextView */,
 				529FFE1122467DEA00914019 /* Buttons */,
 			);
 			path = UIElements;
@@ -96,10 +98,24 @@
 		529FFE1122467DEA00914019 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				529FFE1222467E0300914019 /* CGBorderButton.swift */,
 				529FFE1422467E9C00914019 /* CGFilledButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		529FFE1622468A2F00914019 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				529FFE1722468A4400914019 /* CGTextView.swift */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		529FFE192246926400914019 /* SaveToPhoto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SaveToPhoto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				520CAD3222467A37007B200E /* HomeViewController.swift in Sources */,
+				529FFE1822468A4400914019 /* CGTextView.swift in Sources */,
 				529FFE1522467E9C00914019 /* CGFilledButton.swift in Sources */,
-				529FFE1322467E0300914019 /* CGBorderButton.swift in Sources */,
 				520CAD3022467A37007B200E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

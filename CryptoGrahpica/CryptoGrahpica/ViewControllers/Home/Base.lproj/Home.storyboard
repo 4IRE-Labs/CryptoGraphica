@@ -19,85 +19,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ra3-Dv-PEb">
-                                <rect key="frame" x="20" y="44" width="335" height="246"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="246" id="QJU-X6-r32"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BgOverlay" translatesAutoresizingMaskIntoConstraints="NO" id="Xqj-8l-fy7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qZV-Tz-7oH">
-                                <rect key="frame" x="20" y="300" width="335" height="158"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="100" verticalCompressionResistancePriority="500" image="LogoTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Ra3-Dv-PEb">
+                                <rect key="frame" x="20" y="44" width="335" height="270"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qZV-Tz-7oH" customClass="CGTextView" customModule="CryptoGrahpica" customModuleProvider="target">
+                                <rect key="frame" x="20" y="324" width="335" height="140"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="158" id="QrJ-aS-0t8"/>
+                                    <constraint firstAttribute="height" constant="140" id="QrJ-aS-0t8"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GiW-1j-DXw"/>
+                                </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxk-6W-MeN" customClass="CGFilledButton" customModule="CryptoGrahpica" customModuleProvider="target">
-                                <rect key="frame" x="20" y="463" width="335" height="44"/>
-                                <color key="backgroundColor" name="BlackButton"/>
+                                <rect key="frame" x="20" y="479" width="335" height="44"/>
+                                <color key="backgroundColor" name="CGGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7k3-l4-xAf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                <state key="normal" title="Store to a Photo">
+                                <state key="normal" title="Store to Photo">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="storeToPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MIv-j1-kHm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or reverse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYX-z8-9Ip">
                                 <rect key="frame" x="20" y="573" width="335" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="tZS-p2-hml"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="TextLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4p7-f2-Np2" customClass="CGBorderButton" customModule="CryptoGrahpica" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4p7-f2-Np2" customClass="CGFilledButton" customModule="CryptoGrahpica" customModuleProvider="target">
                                 <rect key="frame" x="20" y="603" width="335" height="44"/>
+                                <color key="backgroundColor" name="CGBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="LL1-DT-OhT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <state key="normal" title="Recover from Photo">
-                                    <color key="titleColor" name="RedButton"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="recoverFromPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEf-jT-I0E"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="BGColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4p7-f2-Np2" secondAttribute="trailing" constant="20" id="1tD-Gg-mOx"/>
-                            <constraint firstItem="Vxk-6W-MeN" firstAttribute="top" secondItem="qZV-Tz-7oH" secondAttribute="bottom" constant="5" id="7B7-Xg-nIw"/>
+                            <constraint firstItem="Xqj-8l-fy7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="369-uC-8cY"/>
+                            <constraint firstItem="Vxk-6W-MeN" firstAttribute="top" secondItem="qZV-Tz-7oH" secondAttribute="bottom" constant="15" id="7B7-Xg-nIw"/>
                             <constraint firstItem="4p7-f2-Np2" firstAttribute="top" secondItem="pYX-z8-9Ip" secondAttribute="bottom" constant="10" id="AGl-JX-5L3"/>
                             <constraint firstItem="4p7-f2-Np2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Fgu-ih-kzv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pYX-z8-9Ip" secondAttribute="trailing" constant="20" id="LyA-Q5-ve3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vxk-6W-MeN" secondAttribute="trailing" constant="20" id="XVB-ki-Kvg"/>
+                            <constraint firstItem="Xqj-8l-fy7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zqe-n1-Mcg"/>
+                            <constraint firstItem="Xqj-8l-fy7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cPa-hE-xPs"/>
                             <constraint firstItem="Ra3-Dv-PEb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="db8-Kl-xwL"/>
+                            <constraint firstItem="Xqj-8l-fy7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fYY-5S-ZXS"/>
                             <constraint firstItem="qZV-Tz-7oH" firstAttribute="top" secondItem="Ra3-Dv-PEb" secondAttribute="bottom" constant="10" id="glR-QF-I4G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qZV-Tz-7oH" secondAttribute="trailing" constant="20" id="jm2-0l-al7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4p7-f2-Np2" secondAttribute="bottom" constant="20" id="ree-rI-2vJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ra3-Dv-PEb" secondAttribute="trailing" constant="20" id="s2P-UI-cys"/>
                             <constraint firstItem="pYX-z8-9Ip" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vNH-0e-8A3"/>
                             <constraint firstItem="Vxk-6W-MeN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="x6d-G4-05w"/>
+                            <constraint firstItem="pYX-z8-9Ip" firstAttribute="top" secondItem="Vxk-6W-MeN" secondAttribute="bottom" constant="50" id="yYB-Ih-EfI"/>
                             <constraint firstItem="Ra3-Dv-PEb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="z16-5E-h88"/>
                             <constraint firstItem="qZV-Tz-7oH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zjp-bd-DPd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bgOverlay" destination="Xqj-8l-fy7" id="88d-8n-I10"/>
+                        <outlet property="orReserveTopOffset" destination="yYB-Ih-EfI" id="bRe-bs-WEO"/>
+                        <outlet property="rocoverBottomOffset" destination="ree-rI-2vJ" id="o2I-Yr-rs2"/>
+                        <outlet property="textView" destination="qZV-Tz-7oH" id="CQq-wV-8st"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="188" height="246"/>
-        <namedColor name="BlackButton">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="BgOverlay" width="375" height="812"/>
+        <image name="LogoTitle" width="330" height="68"/>
+        <namedColor name="BGColor">
+            <color red="0.079999998211860657" green="0.34999999403953552" blue="0.36000001430511475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="RedButton">
-            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="CGBlue">
+            <color red="0.05000000074505806" green="0.56999999284744263" blue="0.87999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CGGreen">
+            <color red="0.0099999997764825821" green="0.88999998569488525" blue="0.61000001430511475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextLabelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="0.40000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="0.40000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
