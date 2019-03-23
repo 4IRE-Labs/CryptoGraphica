@@ -78,8 +78,12 @@ class Decoder {
         
         let salt = ratio
         
+        if salt == 0 {
+            return
+        }
         
         while pixelPosition <= size {
+            print(pixelPosition, size)
             getData(pixel: pixelArray[pixelPosition])
             pixelPosition += salt
             
