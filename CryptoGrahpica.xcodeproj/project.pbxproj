@@ -171,7 +171,8 @@
 		52E2CFBE224698F500F10898 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				52E2CFBF2246993B00F10898 /* UIUtils.swift */,
+				52E2CFD32246BC8700F10898 /* UI */,
+				52E2CFD22246BC8200F10898 /* Crypto */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -192,6 +193,21 @@
 				52E2CFCF2246B7C100F10898 /* Extract.storyboard */,
 			);
 			path = Extract;
+			sourceTree = "<group>";
+		};
+		52E2CFD22246BC8200F10898 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		52E2CFD32246BC8700F10898 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				52E2CFBF2246993B00F10898 /* UIUtils.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		6C4305682891A7698D0EAC32 /* Frameworks */ = {
