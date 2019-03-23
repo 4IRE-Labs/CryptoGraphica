@@ -16,6 +16,7 @@
 		C1D8E63E2246AA3E00A73292 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8E63A2246AA3E00A73292 /* Decoder.swift */; };
 		C1D8E63F2246AA3E00A73292 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8E63B2246AA3E00A73292 /* Encoder.swift */; };
 		C1D8E6402246AA3E00A73292 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8E63C2246AA3E00A73292 /* Defaults.swift */; };
+		C1D8E6422246AEF100A73292 /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8E6412246AEF100A73292 /* Cipher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C1D8E63A2246AA3E00A73292 /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		C1D8E63B2246AA3E00A73292 /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
 		C1D8E63C2246AA3E00A73292 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		C1D8E6412246AEF100A73292 /* Cipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				C1BBFA6B22467E58004224EF /* Assets.xcassets */,
 				C1BBFA6D22467E58004224EF /* LaunchScreen.storyboard */,
 				C1BBFA7022467E58004224EF /* Info.plist */,
+				C1D8E6412246AEF100A73292 /* Cipher.swift */,
 			);
 			path = CryptoGraphica;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				C1D8E63D2246AA3E00A73292 /* Utilities.swift in Sources */,
 				C1BBFA6722467E56004224EF /* ViewController.swift in Sources */,
+				C1D8E6422246AEF100A73292 /* Cipher.swift in Sources */,
 				C1D8E63F2246AA3E00A73292 /* Encoder.swift in Sources */,
 				C1D8E6402246AA3E00A73292 /* Defaults.swift in Sources */,
 				C1D8E63E2246AA3E00A73292 /* Decoder.swift in Sources */,

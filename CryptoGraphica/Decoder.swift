@@ -16,7 +16,7 @@ class Decoder {
     private var step: UInt32 = 0
     private var length: UInt32 = 0
     
-    public func decode(image: UIImage) -> String? {
+    public func decode(image: UIImage, key: String? = nil) -> String? {
         if hasData(in: image),
             let string = self.data,
             String(string.prefix(Defaults.dataPrefix.count)) == Defaults.dataPrefix
@@ -26,14 +26,14 @@ class Decoder {
             let startIndex = string.index(string.startIndex, offsetBy: Defaults.dataPrefix.count)
             
             if let data = Data(base64Encoded: String(string[startIndex..<endIndex])) {
-                return String(data: data, encoding: .utf8)
-            } else {
-                return nil
+                if let key = key, key.count > 0 {
+                    return Cipher.decrypt(data: data, key: key)
+                } else {
+                    return String(data: data, encoding: .utf8)
+                }
             }
-            
-        } else {
-            return nil
         }
+        return nil
     }
     
     private func hasData(in image: UIImage) -> Bool {
