@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import YPImagePicker
 
 class ExtractViewController: UIViewController {
 

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import YPImagePicker
 import Photos
 
 class SaveViewController: UIViewController {
@@ -30,6 +29,7 @@ class SaveViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
+        UIImageWriteToSavedPhotosAlbum(encodedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         let activityViewController = UIActivityViewController(activityItems: [encodedImage], applicationActivities:nil)
         activityViewController.excludedActivityTypes = [.print, .assignToContact, .addToReadingList, .openInIBooks, .markupAsPDF]
         self.present(activityViewController, animated: true) {}
@@ -60,4 +60,18 @@ class SaveViewController: UIViewController {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
+
 }
