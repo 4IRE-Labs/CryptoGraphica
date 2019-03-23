@@ -51,7 +51,7 @@ class SaveViewController: UIViewController {
 //        
 //        UIImageWriteToSavedPhotosAlbum(encodedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         
-        let activityViewController = UIActivityViewController(activityItems: [encodedImage], applicationActivities:nil)
+        let activityViewController = UIActivityViewController(activityItems: ["\(Date())", encodedImage], applicationActivities:nil)
         activityViewController.excludedActivityTypes = [.print, .assignToContact, .addToReadingList, .openInIBooks, .markupAsPDF]
         self.present(activityViewController, animated: true) {}
         
