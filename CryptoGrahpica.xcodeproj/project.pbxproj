@@ -17,6 +17,8 @@
 		529FFE1A2246969E00914019 /* Pods_CryptoGrahpica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003CA15C9033A15F9BD1BED3 /* Pods_CryptoGrahpica.framework */; };
 		529FFE1B2246969E00914019 /* Pods_CryptoGrahpica.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 003CA15C9033A15F9BD1BED3 /* Pods_CryptoGrahpica.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52E2CFC02246993B00F10898 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFBF2246993B00F10898 /* UIUtils.swift */; };
+		52E2CFC42246A36A00F10898 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2CFC32246A36A00F10898 /* PinViewController.swift */; };
+		52E2CFC72246A37E00F10898 /* Pin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E2CFC62246A37E00F10898 /* Pin.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +47,8 @@
 		529FFE1422467E9C00914019 /* CGFilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFilledButton.swift; sourceTree = "<group>"; };
 		529FFE1722468A4400914019 /* CGTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGTextView.swift; sourceTree = "<group>"; };
 		52E2CFBF2246993B00F10898 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		52E2CFC32246A36A00F10898 /* PinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
+		52E2CFC62246A37E00F10898 /* Pin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pin.storyboard; sourceTree = "<group>"; };
 		B298B91AA4B42D02F42961A0 /* Pods-CryptoGrahpica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoGrahpica.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoGrahpica/Pods-CryptoGrahpica.release.xcconfig"; sourceTree = "<group>"; };
 		C7D2ACB6C538CFA00DF910F9 /* Pods-CryptoGrahpica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoGrahpica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoGrahpica/Pods-CryptoGrahpica.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +109,7 @@
 		520CAD4122467A5B007B200E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				52E2CFC52246A36F00F10898 /* Pin */,
 				529FFE192246926400914019 /* SaveToPhoto */,
 				520CAD4222467A80007B200E /* Home */,
 			);
@@ -158,6 +163,15 @@
 				52E2CFBF2246993B00F10898 /* UIUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		52E2CFC52246A36F00F10898 /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				52E2CFC32246A36A00F10898 /* PinViewController.swift */,
+				52E2CFC62246A37E00F10898 /* Pin.storyboard */,
+			);
+			path = Pin;
 			sourceTree = "<group>";
 		};
 		6C4305682891A7698D0EAC32 /* Frameworks */ = {
@@ -229,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E2CFC72246A37E00F10898 /* Pin.storyboard in Resources */,
 				520CAD3A22467A39007B200E /* LaunchScreen.storyboard in Resources */,
 				520CAD3722467A39007B200E /* Assets.xcassets in Resources */,
 				520CAD3522467A37007B200E /* Home.storyboard in Resources */,
@@ -295,6 +310,7 @@
 			files = (
 				52E2CFC02246993B00F10898 /* UIUtils.swift in Sources */,
 				520CAD3222467A37007B200E /* HomeViewController.swift in Sources */,
+				52E2CFC42246A36A00F10898 /* PinViewController.swift in Sources */,
 				529FFE1822468A4400914019 /* CGTextView.swift in Sources */,
 				529FFE1522467E9C00914019 /* CGFilledButton.swift in Sources */,
 				520CAD3022467A37007B200E /* AppDelegate.swift in Sources */,

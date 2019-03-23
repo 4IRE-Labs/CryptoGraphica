@@ -13,7 +13,7 @@ import AVKit
 import Photos
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var logoHeight: NSLayoutConstraint!
     @IBOutlet weak var textView: CGTextView!
     @IBOutlet weak var rocoverBottomOffset: NSLayoutConstraint!
@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
         
         textView.text = textFieldPlaceholder
         textView.textColor = UIColor.lightGray
-
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -47,13 +47,34 @@ class HomeViewController: UIViewController {
         }
         else {
             showPicker(title: "Save to Photo") { [weak self] (mediaItems) in
-                
+                guard let item = mediaItems.first else { return }
+                switch item {
+                case .photo(p: let photo):
+                    let storyboard = UIStoryboard(name: "Pin", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "PinViewController") as! PinViewController
+                    controller.imageView.image = photo.originalImage
+                    self?.present(controller, animated: false, completion: nil)
+                default:
+                    break
+                }
             }
         }
     }
     
     @IBAction func recoverFromPhoto(_ sender: Any) {
-        
+        showPicker(title: "Recover from Photo") { [weak self] (mediaItems) in
+            guard let item = mediaItems.first else { return }
+            switch item {
+            case .photo(p: let photo):
+                let storyboard = UIStoryboard(name: "Pin", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "PinViewController") as! PinViewController
+                controller.imageView.image = photo.originalImage
+                self?.present(controller, animated: false, completion: nil)
+            default:
+                break
+            }
+
+        }
     }
     
     private func showPicker(title: String, action: @escaping ([YPMediaItem]) -> ()) {
@@ -72,7 +93,7 @@ class HomeViewController: UIViewController {
         
         let picker = YPImagePicker(configuration: config)
         picker.didFinishPicking { (mediaItems, cancelled) in
-            picker.dismiss(animated: true, completion: { })
+            picker.dismiss(animated: false, completion: { })
             action(mediaItems)
         }
         present(picker, animated: true, completion: nil)
